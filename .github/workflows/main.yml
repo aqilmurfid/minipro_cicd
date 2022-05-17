@@ -1,0 +1,17 @@
+name: Mini Project JMeter Rest API
+on:
+    push:
+    branches:
+        main
+    pull_request:
+    branches: [main]
+jobs:
+    action_build:
+    runs-on: ubuntu-latest
+    steps:
+      uses: actions/checkout@v3
+      name: Run JMeter Tests
+      uses: rbhadti94/apache-jneter-action@ve.5.0
+      with:
+         testfilePath:  minipro_cicd/tree/main/testAPI/API_MiniPro.jmx
+         outputReportsFolder: reports/
