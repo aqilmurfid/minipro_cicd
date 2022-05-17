@@ -13,7 +13,7 @@ jobs:
       steps:
       - uses: actions/checkout@v3
       - name: Run JMeter Tests
-        uses: rbhadti94/apache-jneter-action@ve.5.0
+        uses: ibiqlik/action-yamllint@main
         with:
           testfilePath:  minipro_cicd/tree/main/testAPI/API_MiniPro.jmx
           outputReportsFolder: reports/
